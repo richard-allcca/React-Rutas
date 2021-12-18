@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// import CrudApi from "./crud-api-json/CrudApi";
+import SongSearch from "./ApiSong/SongSearch";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>React Router</h1>
+      <a
+        href="https://reactrouter.com/web/guides/quick-start"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Documentación
+      </a>
+      <hr />
+      {/* <CrudApi /> */}
+      <hr />
+      <SongSearch />
     </div>
   );
 }
 
 export default App;
+
+// Notas:
+// 1. La etiqueta a necesita el atributo target y rel
