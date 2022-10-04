@@ -15,7 +15,7 @@ export const CrudApi = () => {
   const [loading, setLoading] = useState(false);
 
   let api = helperHttp(); //comentado para evitar el warning de []
-  let url = "http://localhost:5000/santos";
+  let url = "http://localhost:8080/santos";
 
   useEffect(() => {
     setLoading(true);
@@ -67,7 +67,6 @@ export const CrudApi = () => {
     let options = {
       body: data,
       headers: { "content-type": "application/json" },
-      //! no actualiza verifica y arregla - descarga el codigo de jon
     };
 
     api.put(endpoint, options).then((res) => {

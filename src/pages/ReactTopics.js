@@ -14,7 +14,8 @@ const Topic = () => {
   // console.log(topic);
   return (
     <div>
-      <h4>{topic}</h4>
+      <h5>este el el contenido del body</h5>
+      <p>Elegiste el tema de: {topic}</p>
       <p>
         <b>Este componente "Topic" esta dentro del componente ReactTopics.</b>
         <br />
@@ -28,33 +29,46 @@ const ReactTopics = () => {
   let { path, url } = useRouteMatch();
 
   return (
-    <div>
-      <h3>Temas de React con Rutas Anidadas</h3>
-      <p>
-        Estos enlaces internos no usan "exact" por que se manejan con rutas
-        relativas
-      </p>
-      <ul>
-        <li>
-          <Link to={`${url}/jsx`}>JSX</Link>
-        </li>
-        <li>
-          <Link to={`${url}/props`}>Props</Link>
-        </li>
-        <li>
-          <Link to={`${url}/estado`}>Estado</Link>
-        </li>
-        <li>
-          <Link to={`${url}/componentes`}>Componentes</Link>
-        </li>
-      </ul>
-      <Switch>
-        <Route exact path={path}>
-          <h4>Elige un tema de React</h4>
-        </Route>
-        <Route path={`${path}/:topic`} component={Topic} />
-      </Switch>
-    </div>
+    <>
+      <header>
+        <h3>Temas de React con Rutas Anidadas</h3>
+        <p>
+          Estos enlaces internos no usan "exact" por que se manejan con rutas
+          relativas
+        </p>
+      </header>
+
+      <aside>
+        <ul>
+          <li>
+            <Link to={`${url}/jsx`}>JSX</Link>
+          </li>
+          <li>
+            <Link to={`${url}/props`}>Props</Link>
+          </li>
+          <li>
+            <Link to={`${url}/estado`}>Estado</Link>
+          </li>
+          <li>
+            <Link to={`${url}/componentes`}>Componentes</Link>
+          </li>
+        </ul>
+      </aside>
+
+      <section>
+        <h4>Este es el Body</h4>
+        <Switch>
+          <Route exact path={path}>
+            <h4>Elige un tema de React</h4>
+          </Route>
+          <Route path={`${path}/:topic`} component={Topic} />
+        </Switch>
+      </section>
+
+      <footer>
+        <h4>Este es el Footer</h4>
+      </footer>
+    </>
   );
 };
 export default ReactTopics;

@@ -1,22 +1,20 @@
+// import SongSearch from "./ApiSong/SongSearch";
 // import CrudApi from "./crud-api-json/CrudApi";
-import SongSearch from "./ApiSong/SongSearch";
+// import MainRouter from "./router-conceptos/MainRouter";
 import "./App.css";
+import Practice from "./Pruebas/Practice";
 
 function App() {
   return (
     <div>
       <h1>React Router</h1>
-      <a
-        href="https://reactrouter.com/web/guides/quick-start"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Documentación
-      </a>
+
       <hr />
+      <Practice />
+      {/* <MainRouter /> */}
       {/* <CrudApi /> */}
       <hr />
-      <SongSearch />
+      {/* <SongSearch /> */}
     </div>
   );
 }

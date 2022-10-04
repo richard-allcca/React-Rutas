@@ -14,7 +14,7 @@ const EjemploRoute = () => {
       </ul>
       <Router>
         <Switch>
-          {/*  1  */}
+          {/*  1 Uso simple  */}
           <Route exact path="/">
             <h3>Home</h3>
             <p>
@@ -23,10 +23,10 @@ const EjemploRoute = () => {
             </p>
           </Route>
 
-          {/* 2  */}
+          {/* 2 Usando component */}
           <Route exact path="/acerca" component={Acerca} />
 
-          {/* 3 */}
+          {/* 3 Usando children */}
           <Route exact path="/contacto" children={<Contacto />} />
         </Switch>
       </Router>
@@ -37,9 +37,7 @@ const EjemploRoute = () => {
 export default EjemploRoute;
 
 // Notas:
-// 1.  Ejemplos de uso para Route en Router
-// 2. Metodo simple
-// 3. Usando component
-// - con component puedes solo pasar el nombre del compónente component={NameComponente}
-// 4. Usando children
-// - con children se declara el componente dentro de llaves children={<Componente/>}
+// Ejemplos de uso para Route en Router
+// 1. Metodo simple
+// 2. con component puedes pasar solo el nombre del compónente como prop
+// 3. con children se pasa el tag del componente dentro de la prop children
